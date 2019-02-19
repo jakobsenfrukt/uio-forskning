@@ -1,29 +1,19 @@
-# uio-forskning
+# UiO Forskningsformidling
 
-## Project setup
+**Project setup**
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
+npm install
 ```
 
-### Compiles and minifies for production
+**Compiles and hot-reloads for development**
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
+npm run serve
 ```
 
-### Lints and fixes files
+**Compiles and minifies for production**
 ```
-yarn run lint
+npm run build
 ```
 
-### Customize configuration
+**Customize configuration**
 See [Configuration Reference](https://cli.vuejs.org/config/).
