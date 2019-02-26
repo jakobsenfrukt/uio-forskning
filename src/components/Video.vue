@@ -1,7 +1,7 @@
 <template>
   <div :class="size">
     <figure>
-      <img :src="image" />
+      <iframe width="560" height="315" :src="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <figcaption v-if="caption">
         {{ caption }}
       </figcaption>
@@ -11,9 +11,9 @@
 
 <script>
 export default {
-  name: 'Figure',
+  name: 'Video',
   props: {
-    image: String,
+    video: String,
     caption: String,
     alt: String,
     size: String
@@ -30,6 +30,10 @@ div {
   figure {
     margin: 0;
     padding: 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
   }
 
   &.full {
@@ -44,15 +48,22 @@ div {
     }
   }
 
-  img {
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
   }
 
   figcaption {
     padding: 0.6rem 1rem;
     max-width: $width-s;
     margin: -1rem auto;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
     background: $color-black;
     color: $color-white;

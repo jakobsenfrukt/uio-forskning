@@ -5,7 +5,7 @@
 }
 
 html {
-	font-size: calc(16px + 6 * ((100vw - 320px) / 1200));
+	font-size: calc(16px + 6 * ((100vw - 320px) / 1900));
   height: 100%;
   background: $color-black;
 }
@@ -21,6 +21,15 @@ body {
 
 section {
   padding: 0 1rem;
+
+  &.background {
+    background: $color-gray;
+    padding: 2rem 1rem;
+  }
+
+  p:last-child {
+    margin-bottom: 4rem;
+  }
 }
 
 a {
@@ -35,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 4rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
   max-width: $width-m;
 }
 
@@ -52,7 +61,7 @@ h3 {
 p {
   max-width: $width-s;
   margin: 0 auto 2rem;
-  line-height: 1.46;
+  line-height: 1.6;
 
   font-family: $serif;
 
@@ -61,4 +70,94 @@ p {
     max-width: $width-m;
     margin-bottom: 4rem;
   }
+}
+
+blockquote {
+  max-width: $width-l;
+  margin: 4rem auto 6rem;
+  font-family: $serif;
+  font-style: italic;
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: center;
+
+  &:before {
+    content: "«";
+  }
+  &:after {
+    content: "»";
+  }
+}
+
+ul {
+  max-width: $width-s;
+  margin: 0 auto 2rem;
+  padding: 0 0 0 1rem;
+  line-height: 1.46;
+  font-family: $serif;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.facts {
+  max-width: $width-s;
+  margin: 0 auto;
+  font-size: 0.9rem;
+
+  &-inner {
+    margin: 0 -2rem;
+    padding: 2rem 2rem;
+    background: $color-gray;
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+}
+
+.people {
+  h3 {
+    max-width: $width-l;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: $width-l;
+  }
+
+  li {
+    width: 28%;
+  }
+
+  img {
+    width: 80%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .bio {
+    font-size: 0.8rem;
+  }
+}
+
+.download {
+  width: $width-s;
+  margin: 4rem auto;
+
+  .inner {
+    padding: 1rem 2rem;
+    margin: 0 -2rem;
+    border: 1px solid $color-black;
+    cursor: pointer;
+  }
+
 }
