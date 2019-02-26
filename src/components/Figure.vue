@@ -1,9 +1,10 @@
 <template>
-  <div :class="size">
+  <div class="figure" :class="size">
     <figure>
       <img :src="image" />
       <figcaption v-if="caption">
         {{ caption }}
+        <span class="photoby">Foto: Svein Stølen</span>
       </figcaption>
     </figure>
   </div>
@@ -44,6 +45,61 @@ div {
     }
   }
 
+  &.split {
+    width: $width-l;
+    margin-top: 3rem;
+
+    figure {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      width: 50%;
+      display: block;
+      align-self: center;
+      padding-right: 1rem;
+    }
+
+    figcaption {
+      margin: 0;
+      width: 50%;
+      background: none;
+      color: $color-black;
+      line-height: 1.6;
+      font-style: italic;
+      font-family: $serif;
+      font-size: 1rem;
+    }
+
+    .photoby {
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    &.reverse {
+      text-align: right;
+      figcaption {
+        order: 1;
+      }
+      img {
+        order: 2;
+        padding-right: 0;
+        padding-left: 1rem;
+      }
+      .photoby {
+        text-align: right;
+      }
+    }
+  }
+
+  &.quote {
+    figcaption {
+      font-style: italic;
+      font-family: $serif;
+    }
+  }
+
   img {
     width: 100%;
   }
@@ -58,6 +114,14 @@ div {
     color: $color-white;
 
     font-size: $font-s;
+  }
+
+  .photoby {
+    font-size: $font-xs;
+    display: block;
+    font-style: italic;
+    text-align: right;
+    font-family: sans-serif;
   }
 }
 </style>

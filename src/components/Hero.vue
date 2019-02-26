@@ -3,9 +3,12 @@
   <!--<div class="hero" :style="{ 'background-image': 'url(' + image + ')' }">-->
     <img :src="image" />
     <div class="overlay">
+      <transition name="fadeup" appear>
       <div class="text">
         <h1>{{ heading }}</h1>
+        <span class="subhead">RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion</span>
       </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -24,7 +27,7 @@ export default {
 @import '@/css/variables.scss';
 
 .hero {
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
   position: relative;
 
   /*height: 70vh;
@@ -49,6 +52,15 @@ export default {
     margin: 0 auto;
     color: white;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+  .subhead {
+    font-size: $font-s;
+    line-height: 1.2;
+    display: block;
+    margin: 0.5rem 0 1.6rem;
   }
 }
 </style>

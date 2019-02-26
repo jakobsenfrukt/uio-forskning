@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <header class="site-header">
-      <div class="logo"></div>
+      <div class="logo">UiO</div>
       <nav class="site-nav">
         <div class="menu" id="main-menu">
           <ul>
             <!--<li><router-link to="/">Home</router-link></li>-->
-            <h3>Innhold</h3>
+            <h3>Overskrift H1</h3>
+            <span class="subhead">RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion</span>
             <li><a href="#" v-scroll-to="'#intro'">Introduksjon</a></li>
             <li>
               <a href="#" v-scroll-to="'#part1'">Hva er RITMO?</a>
@@ -20,7 +21,7 @@
           </ul>
         </div>
         <div class="menu-toggle" @click="togglemenu()">
-          <template v-if="showmenu">x</template>
+          <template v-if="showmenu">&times;</template>
           <template v-else>=</template>
         </div>
       </nav>
@@ -59,10 +60,23 @@ export default {
 @import 'css/main.scss';
 
 .logo {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background: $color-red;
+  font-family: $serif;
+  padding-right: 0.6rem;
+  position: relative;
+  &:before, &:after {
+    content: " ";
+    display: block;
+    width: 0.32rem;
+    height: 0.32rem;
+    border-radius: 50%;
+    background: $color-red;
+    position: absolute;
+    top: 0.24rem;
+    right: 0;
+  }
+  &:after {
+    top: 0.7rem;
+  }
 }
 
 .site-header {
@@ -114,12 +128,20 @@ export default {
     }
 
     h3 {
-      margin-top: 0;
+      margin: 0;
+      font-size: 2rem;
+    }
+    .subhead {
+      font-size: $font-s;
+      line-height: 1.2;
+      display: block;
+      margin: 0.5rem 0 2rem;
     }
 
     ul {
       list-style: none;
       font-size: 1.2rem;
+      font-family: $sans-serif;
     }
 
     li {
@@ -133,6 +155,7 @@ export default {
         border-radius: 50%;
         margin-right: 0.6rem;
       }
+      
 
       ul {
         margin-top: 0.6rem;
@@ -145,16 +168,6 @@ export default {
       &:hover {
         text-decoration: underline;
       }
-    }
-  }
-
-  @media (max-width: $media-s) {
-    display: block;
-
-    .menu {
-      width: 100%;
-      margin: 2rem auto;
-      text-align: center;
     }
   }
 }
