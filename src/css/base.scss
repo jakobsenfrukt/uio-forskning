@@ -72,23 +72,6 @@ p {
   }
 }
 
-blockquote {
-  max-width: $width-l;
-  margin: 4rem auto 6rem;
-  font-family: $serif;
-  font-style: italic;
-  font-size: 2rem;
-  line-height: 1.4;
-  text-align: center;
-
-  &:before {
-    content: "«";
-  }
-  &:after {
-    content: "»";
-  }
-}
-
 ul {
   max-width: $width-s;
   margin: 0 auto 2rem;

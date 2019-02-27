@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header class="site-header">
+    <header id="header" class="site-header">
       <div class="logo">UiO</div>
       <nav class="site-nav">
         <div class="menu" id="main-menu">
@@ -51,7 +51,21 @@ export default {
     togglemenu: function() {
       document.getElementById('main-menu').classList.toggle('visible');
       this.showmenu = !this.showmenu;
+    },
+    handleScroll: function() {
+      const items = document.querySelectorAll('.item');
+      for (const item of items) {
+        if (item.getBoundingClientRect().top <= window.innerHeight * 0.8 && item.getBoundingClientRect().top > 0) {
+          item.classList.add('inview');
+        }
+      }
     }
+  },
+  created() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>

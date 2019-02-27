@@ -1,5 +1,5 @@
 <template>
-  <div class="figure" :class="size">
+  <div class="figure item" :class="size">
     <figure>
       <img :src="image" />
       <figcaption v-if="caption">

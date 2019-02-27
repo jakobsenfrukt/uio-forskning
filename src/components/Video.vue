@@ -1,5 +1,5 @@
 <template>
-  <div :class="size">
+  <div class="video item" :class="size">
     <figure>
       <iframe width="560" height="315" :src="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <figcaption v-if="caption">

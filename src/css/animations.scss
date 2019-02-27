@@ -11,3 +11,14 @@
   opacity: 0;
   transform: translateY(3rem);
 }
+
+.item {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: all 0.6s ease-in-out;
+
+  &.inview {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
