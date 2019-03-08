@@ -27,6 +27,7 @@ export default {
 
 div {
   margin: 0 auto 4rem;
+  max-width: 100%;
 
   figure {
     margin: 0;
@@ -42,6 +43,9 @@ div {
 
     figure {
       margin: 0 -2rem;
+      @media (max-width: $media-s) {
+        margin: 0 1rem;
+      }
     }
   }
 
@@ -89,6 +93,20 @@ div {
       }
       .photoby {
         text-align: right;
+      }
+    }
+
+    @media (max-width: $media-s) {
+      padding: 0 1rem;
+      figure {
+        display: block;
+      }
+
+      img, figcaption,
+      &.reverse figcaption, &.reverse img {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }

@@ -17,8 +17,10 @@ export default {
 @import '@/css/variables.scss';
 
 blockquote {
-  max-width: $width-l;
-  margin: 4rem auto 6rem;
+  width: $width-l;
+  max-width: 100%;
+  margin: 4rem auto 4.6rem;
+  padding: 0 1rem;
   font-family: $serif;
   font-style: italic;
   font-size: 2rem;
@@ -30,6 +32,10 @@ blockquote {
   }
   &:after {
     content: "»";
+  }
+
+  @media (max-width: $media-s) {
+    font-size: 1.3rem;
   }
 }
 </style>

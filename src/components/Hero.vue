@@ -49,6 +49,7 @@ export default {
   }
   .text {
     width: $width-m;
+    max-width: 100%;
     margin: 0 auto;
     color: white;
     text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);
@@ -61,6 +62,12 @@ export default {
     line-height: 1.2;
     display: block;
     margin: 0.5rem 0 1.6rem;
+  }
+
+  @media (max-width: $media-s) {
+    .text {
+      padding: 0 1rem;
+    }
   }
 }
 </style>

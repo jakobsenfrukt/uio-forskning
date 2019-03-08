@@ -26,6 +26,7 @@ export default {
 
 div {
   margin: 0 auto 4rem;
+  max-width: 100%;
 
   figure {
     margin: 0;
@@ -45,6 +46,10 @@ div {
 
     figure {
       margin: 0 -2rem;
+
+      @media (max-width: $media-s) {
+        margin: 0;
+      }
     }
   }
 

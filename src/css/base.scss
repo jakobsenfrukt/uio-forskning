@@ -93,6 +93,10 @@ ul {
     margin: 0 -2rem;
     padding: 2rem 2rem;
     background: $color-gray;
+
+    @media (max-width: $media-s) {
+      margin: 0 1rem;
+    }
   }
 
   h3 {
@@ -103,14 +107,17 @@ ul {
 
 .people {
   h3 {
-    max-width: $width-l;
+    width: $width-l;
+    max-width: 100%;
   }
   ul {
     padding: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    max-width: $width-l;
+    width: $width-l;
+    max-width: 100%;
   }
 
   li {
@@ -125,15 +132,28 @@ ul {
 
   .name {
     font-size: 1.2rem;
+    margin: 0 0 0.6rem;
   }
 
   .bio {
     font-size: 0.8rem;
   }
+
+  @media (max-width: $media-s) {
+    li {
+      width: 100%;
+    }
+    img {
+      width: 30%;
+      margin-right: 1rem;
+      float: left;
+    }
+  }
 }
 
 .download {
   width: $width-s;
+  max-width: 100%;
   margin: 4rem auto;
 
   .inner {
@@ -141,6 +161,11 @@ ul {
     margin: 0 -2rem;
     border: 1px solid $color-black;
     cursor: pointer;
+
+    @media (max-width: $media-s) {
+      margin: 0 1rem;
+      text-align: center;
+    }
   }
 
 }
