@@ -36,6 +36,7 @@ blockquote {
 
   @media (max-width: $media-s) {
     font-size: 1.3rem;
+    margin: 1rem auto 2rem;
   }
 }
 </style>

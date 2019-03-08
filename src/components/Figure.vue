@@ -97,6 +97,7 @@ div {
     }
 
     @media (max-width: $media-s) {
+      margin: 1rem auto 2rem;
       padding: 0 1rem;
       figure {
         display: block;
@@ -140,6 +141,10 @@ div {
     font-style: italic;
     text-align: right;
     font-family: sans-serif;
+  }
+
+  @media (max-width: $media-s) {
+    margin-bottom: 2rem;
   }
 }
 </style>

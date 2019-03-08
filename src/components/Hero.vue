@@ -29,6 +29,7 @@ export default {
 .hero {
   margin: 0 auto 2rem;
   position: relative;
+  min-height: 60vh;
 
   /*height: 70vh;
   background-attachment: fixed;

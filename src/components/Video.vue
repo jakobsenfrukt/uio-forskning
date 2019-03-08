@@ -75,5 +75,9 @@ div {
 
     font-size: $font-s;
   }
+
+  @media (max-width: $media-s) {
+    margin-bottom: 2rem;
+  }
 }
 </style>

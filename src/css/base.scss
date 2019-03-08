@@ -24,7 +24,7 @@ section {
 
   &.background {
     background: $color-gray;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
   }
 
   p:last-child {
@@ -44,18 +44,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 4rem;
-  margin-top: 3rem;
   max-width: $width-m;
 }
 
 h2 {
   font-size: 2.6rem;
-  margin-top: 3rem;
 }
 
 h3 {
   font-size: 1.8rem;
-  margin-top: 3rem;
 }
 
 p {
@@ -81,6 +78,35 @@ ul {
 
   li {
     margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: $media-s) {
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    &.lead {
+      font-size: 1.2rem;
+    }
+  }
+  section {
+    padding: 1rem;
+    &.background {
+      padding: 2rem 1rem;
+    }
+    p:last-child {
+      margin-bottom: 2rem;
+    }
   }
 }
 
