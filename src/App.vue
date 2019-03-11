@@ -8,13 +8,13 @@
             <!--<li><router-link to="/">Home</router-link></li>-->
             <h3>Overskrift H1</h3>
             <span class="subhead">RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion</span>
-            <li><a href="#" v-scroll-to="'#intro'">Introduksjon</a></li>
+            <li><a href="#" v-scroll-to="{ el: '#intro', onStart: togglemenu }">Introduksjon</a></li>
             <li>
-              <a href="#" v-scroll-to="'#part1'">Hva er RITMO?</a>
+              <a href="#" v-scroll-to="{ el: '#part1', onStart: togglemenu }">Hva er RITMO?</a>
               <ul>
-                <li><a href="#" v-scroll-to="'#part2'">Rytme</a></li>
-                <li><a href="#" v-scroll-to="'#part3'">Tid</a></li>
-                <li><a href="#" v-scroll-to="'#part4'">Bevegelse</a></li>
+                <li><a href="#" v-scroll-to="{ el: '#part2', onStart: togglemenu }">Rytme</a></li>
+                <li><a href="#" v-scroll-to="{ el: '#part3', onStart: togglemenu }">Tid</a></li>
+                <li><a href="#" v-scroll-to="{ el: '#part4', onStart: togglemenu }">Bevegelse</a></li>
               </ul>
             </li>
             <li><a href="#" v-scroll-to="'#end'">Ansatte</a></li>
@@ -141,6 +141,10 @@ export default {
       transform: translateX(0);
     }
 
+    @media (max-width: $media-s) {
+      width: 100%;
+    }
+
     h3 {
       margin: 0;
       font-size: 2rem;
@@ -156,6 +160,12 @@ export default {
       list-style: none;
       font-size: 1.2rem;
       font-family: $sans-serif;
+
+      @media (max-width: $media-s) {
+        max-width: none;
+        width: 100%;
+        padding: 0;
+      }
     }
 
     li {
