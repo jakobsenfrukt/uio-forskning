@@ -54,6 +54,17 @@
       <h2>Overskrift H2 som kanskje går over to linjer</h2>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
     </section>
+    <div class="facts item">
+      <div class="facts-inner">
+        <h3>Dette er fakta</h3>
+        <ul>
+          <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+          <li>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+          <li>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</li>
+          <li>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</li>
+        </ul>
+      </div>
+    </div>
     <Figure
       image="https://www.mn.uio.no/geo/english/research/news-and-events/news/2018/bilder/greenland-507px.jpg"
       caption="Dette er en bildetekst! :)"
@@ -75,7 +86,7 @@
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
     </section>
     <div class="facts item">
-      <div class="facts-inner">
+      <div class="facts-inner background">
         <h3>Dette er fakta</h3>
         <ul>
           <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>

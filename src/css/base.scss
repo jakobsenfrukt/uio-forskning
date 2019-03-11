@@ -23,7 +23,7 @@ section {
   padding: 0 1rem;
 
   &.background {
-    background: $color-gray;
+    background: rgba($color-theme, 0.3);
     padding: 4rem 1rem;
   }
 
@@ -117,8 +117,11 @@ ul {
 
   &-inner {
     margin: 0 -2rem;
-    padding: 2rem 2rem;
-    background: $color-gray;
+    padding: 1.4rem 2rem;
+    
+    &.background {
+      background: rgba($color-theme, 0.3);
+    }
 
     @media (max-width: $media-s) {
       margin: 0 1rem;
@@ -128,6 +131,24 @@ ul {
   h3 {
     margin-top: 0;
     font-size: 1.4rem;
+  }
+
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      &:before {
+        content: " ";
+        display: block;
+        width: 0.36rem;
+        height: 0.36rem;
+        border-radius: 50%;
+        background: darken($color-theme, 10%);
+        position: absolute;
+        left: -0.9rem;
+        top: 0.5rem;
+      }
+    }
   }
 }
 
