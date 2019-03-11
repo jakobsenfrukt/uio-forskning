@@ -2,9 +2,11 @@
   <div class="figure item" :class="size">
     <figure>
       <img :src="image" />
-      <figcaption v-if="caption">
-        {{ caption }}
-      </figcaption>
+      <div class="caption-wrapper" v-for="(caption, index) in captions" :key="`caption-${index}`">
+        <figcaption>
+          {{ caption }}
+        </figcaption>
+      </div>
     </figure>
   </div>
 </template>
@@ -16,6 +18,7 @@ export default {
     image: String,
     captions: Array,
     alt: String
+  }
 }
 </script>
 
@@ -32,7 +35,13 @@ div {
   }
 
   img {
-    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+
+  .caption-wrapper {
+    height: 100vh;
   }
 
   figcaption {

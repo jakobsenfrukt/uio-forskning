@@ -16,6 +16,13 @@
       <h2>Overskrift H2</h2>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
     </section>
+    <FixedMedia
+      image="https://media.gadventures.com/media-server/cache/c6/2e/c62e5721fef11ef37d6c0815821c7b25.jpg"
+      :captions="[
+        'Dette er en bildetekst',
+        'Dette er også en bildetekst'
+      ]"
+    />
     <Video
       video="https://www.youtube.com/embed/PKMQzkIiB0Y"
       caption="Dette er en bildetekst! :)"
@@ -146,6 +153,7 @@ import Hero from '@/components/Hero.vue'
 import Figure from '@/components/Figure.vue'
 import Video from '@/components/Video.vue'
 import Quote from '@/components/Quote.vue'
+import FixedMedia from '@/components/FixedMedia.vue'
 
 export default {
   name: 'home',
@@ -153,7 +161,8 @@ export default {
     Hero,
     Figure,
     Video,
-    Quote
+    Quote,
+    FixedMedia
   }
 }
 </script>
