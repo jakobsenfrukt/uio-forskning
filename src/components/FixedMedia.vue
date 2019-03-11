@@ -1,5 +1,5 @@
 <template>
-  <div class="figure item" :class="size">
+  <div class="figure item">
     <figure>
       <img :src="image" />
       <div class="caption-wrapper" v-for="(caption, index) in captions" :key="`caption-${index}`">
@@ -28,20 +28,26 @@ export default {
 div {
   margin: 0 auto 4rem;
   width: 100%;
+  position: relative;
 
   figure {
     margin: 0;
     padding: 0;
+    position: relative;
   }
 
   img {
     position: sticky;
     top: 0;
     height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1000;
   }
 
   .caption-wrapper {
     height: 100vh;
+    z-index: 1001;
   }
 
   figcaption {
@@ -49,11 +55,8 @@ div {
     max-width: $width-s;
     margin: -1rem auto;
     position: relative;
-    z-index: 10;
     background: $color-black;
     color: $color-white;
-
-    font-size: $font-s;
   }
 }
 </style>
