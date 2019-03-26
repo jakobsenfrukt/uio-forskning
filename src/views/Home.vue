@@ -43,29 +43,17 @@
       <h2>Fattigdom påvirker læring</h2>
       <p>Når Melby-Lervåg skal trekke fram de forskningsprosjektene hun synes er de beste og viktigste i karrieren så langt, kommer hun opp med tre. Hun understreker at prosjektene er et resultat av teamarbeid, blant annet med ektemannen Arne Lervåg.</p>
     </section>
-    <Figure
-      image="/images/woman2.jpeg"
-      caption="— Vi har lært mye av hverandre og utfyller hverandre på en veldig fin måte i prosjektene."
-      alt="Bildet viser no greier"
-      size="split full reverse"
-    />
+    <Quote text="Vi har lært mye av hverandre og utfyller hverandre på en veldig fin måte i prosjektene." />
     <section class="text item">
       <h3>Overskrift H3</h3>
       <p class="lead">Det tredje prosjektet hun vil trekke fram er nylig satt i gang. Det er et prosjekt med søkelys på matematikk og tallforståelse.</p>
     </section>
-    <FixedMedia
-      image="/images/barn1.jpeg"
-      :captions="[
-        '– Vi er interessert i å finne ut hvordan språk og språkutvikling påvirker matte og tall. Til det har vi rekruttert 300 5-åringer fra fire kommuner utafor Oslo. De skal følges til de er 18 år.',
-        'Forskerne skal se spesielt på kjønn og sosioøkonomiske forskjeller, og i starten skal barna bli kartlagt én gang i året. Etter hvert er tanken å slakke litt ned på kartleggingsintervallene.',
-        'Melby-Lervåg understreker at dette er en rein observasjonsstudie – de gjør ingen intervensjoner – så derfor er det heller ingen kontrollgruppe.',
-        '– Det er viktig med observasjonsstudier. Med utgangspunkt i slike store longitudinelle studier kan vi finne ut når og hvordan det skal interveneres. Dette kan igjen testes videre i tiltaksundersøkelser.'
-      ]"
-    />
+    <FixedGallery :media="gallery1" />
     <section class="text item">
       <h2>Et ungt forskningsfelt</h2>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
     </section>
+    <MultiColumn :blocks="blocks1" />
     <section id="part3" class="text item background">
       <h2>Karriereløpsprogrammet for forskere</h2>
       <p>Det utdanningsvitenskapelige fakultet startet opp et karriereløpsprogram for fem utvalgte forskere i  2017. Disse er blant fakultetets mest fremragende forskere som er i en fase av karrieren hvor de holder på å bygge opp egne forskergrupper. Målet med karriereløpsprogram et er at kandidatene skal bygge karrieren sin slik at de er i best mulig posisjon til å nå opp i konkurrensen om prestisjetunge forskningsmidler fra blant annet Det europeiske forskningsrådet - ERC. ERC European Research Council støtter rein nysgjerrighetsdrevet forskning – altså grunnforskning, forskning som ikke er resultatavhengig. Deltakerne i programmet får to sjølvalgte mentorer. Programmet varer i 5 år.</p>
@@ -75,7 +63,7 @@
       alt="Bildet viser no greier"
       size="full"
     />
-    <section id="part2" class="text item">
+    <!--<section id="part2" class="text item">
       <h2>Overskrift H2 som kanskje går over to linjer</h2>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
     </section>
@@ -142,7 +130,7 @@
       video="/video/monika.mp4"
       caption="Dette er en bildetekst! :)"
       size="column"
-    />
+    />-->
     <div class="download item">
       <div class="inner">
         Last ned hele publikasjonen (PDF)
@@ -178,6 +166,8 @@ import Figure from '@/components/Figure.vue'
 import Video from '@/components/Video.vue'
 import Quote from '@/components/Quote.vue'
 import FixedMedia from '@/components/FixedMedia.vue'
+import FixedGallery from '@/components/FixedGallery.vue'
+import MultiColumn from '@/components/MultiColumn.vue'
 
 export default {
   name: 'home',
@@ -186,7 +176,48 @@ export default {
     Figure,
     Video,
     Quote,
-    FixedMedia
+    FixedMedia,
+    FixedGallery,
+    MultiColumn
+  },
+  data: function() {
+    return {
+      gallery1: [
+        {
+          image: '/images/barn1.jpeg',
+          quote: 'Vi er interessert i å finne ut hvordan språk og språkutvikling påvirker matte og tall. Til det har vi rekruttert 300 5-åringer fra fire kommuner utafor Oslo. De skal følges til de er 18 år.'
+        },
+        {
+          image: '/images/barn1.jpeg',
+          caption: 'Forskerne skal se spesielt på kjønn og sosioøkonomiske forskjeller, og i starten skal barna bli kartlagt én gang i året. Etter hvert er tanken å slakke litt ned på kartleggingsintervallene.'
+        },
+        {
+          image: '/images/barn1.jpeg',
+          caption: 'Melby-Lervåg understreker at dette er en rein observasjonsstudie – de gjør ingen intervensjoner – så derfor er det heller ingen kontrollgruppe.',
+          quote: 'Det er viktig med observasjonsstudier. Med utgangspunkt i slike store longitudinelle studier kan vi finne ut når og hvordan det skal interveneres. Dette kan igjen testes videre i tiltaksundersøkelser.'
+        }
+      ],
+      blocks1: [
+        {
+          image: '/images/woman2.jpeg',
+          heading: 'Et punkt med lenke',
+          link: '#',
+          text: 'Forskerne skal se spesielt på kjønn og sosioøkonomiske forskjeller, og i starten skal barna bli kartlagt én gang i året. Etter hvert er tanken å slakke litt ned på kartleggingsintervallene.'
+        },
+        {
+          image: '/images/woman2.jpeg',
+          heading: 'Et punkt med lenke',
+          link: '#',
+          text: 'Forskerne skal se spesielt på kjønn og sosioøkonomiske forskjeller, og i starten skal barna bli kartlagt én gang i året. Etter hvert er tanken å slakke litt ned på kartleggingsintervallene.'
+        },
+        {
+          image: '/images/woman2.jpeg',
+          heading: 'Et punkt med lenke',
+          link: '#',
+          text: 'Forskerne skal se spesielt på kjønn og sosioøkonomiske forskjeller, og i starten skal barna bli kartlagt én gang i året. Etter hvert er tanken å slakke litt ned på kartleggingsintervallene.'
+        },
+      ]
+    }
   }
 }
 </script>

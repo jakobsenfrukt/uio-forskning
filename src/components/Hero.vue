@@ -36,6 +36,8 @@ export default {
   min-height: 60vh;
   background: $color-black;
 
+  overflow: hidden;
+
   /*height: 70vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
