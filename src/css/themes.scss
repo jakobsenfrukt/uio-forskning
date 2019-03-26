@@ -8,11 +8,12 @@
   p, figcaption, ul, blockquote, .site-footer {
     font-family: 'pt serif', serif !important;
   }
-  p.lead, .photoby {
+  .photoby {
     font-family: 'pt sans', sans-serif !important;
   }
   h1 {
     font-size: 5.6rem;
+    line-height: 1;
   }
   h2 {
     font-size: 3.8rem;
@@ -30,6 +31,20 @@
   div.split figcaption, div.split.quote figcaption {
     font-size: 1.6rem !important;
     line-height: 1.4 !important;
+  }
+  figcaption {
+    background: white !important;
+    color: black !important;
+  }
+  .gallery-fixed .text-wrapper blockquote:before {
+    top: 0.5rem !important;
+    font-size: 5rem !important;
+  }
+  blockquote:before, blockquote:after {
+    color: $color-theme !important;
+  }
+  .site-header, .site-footer, .menu {
+    background: darken($color-theme, 30%);
   }
 }
 

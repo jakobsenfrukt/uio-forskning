@@ -46,7 +46,7 @@
     <Quote text="Vi har lært mye av hverandre og utfyller hverandre på en veldig fin måte i prosjektene." />
     <section class="text item">
       <h3>Overskrift H3</h3>
-      <p class="lead">Det tredje prosjektet hun vil trekke fram er nylig satt i gang. Det er et prosjekt med søkelys på matematikk og tallforståelse.</p>
+      <p>Det tredje prosjektet hun vil trekke fram er nylig satt i gang. Det er et prosjekt med søkelys på matematikk og tallforståelse.</p>
     </section>
     <FixedGallery :media="gallery1" />
     <section class="text item">

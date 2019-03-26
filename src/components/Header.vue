@@ -216,7 +216,6 @@ export default {
       line-height: 1.2;
       display: block;
       margin: 0.5rem 0.5rem 2rem 0;
-      font-style: italic;
       padding-bottom: 1rem;
       border-bottom: 1px solid $color-white;
     }
