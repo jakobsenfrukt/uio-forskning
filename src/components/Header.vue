@@ -218,6 +218,7 @@ export default {
       margin: 0.5rem 0.5rem 2rem 0;
       padding-bottom: 1rem;
       border-bottom: 1px solid $color-white;
+      font-size: 0.95rem;
     }
 
     ul {

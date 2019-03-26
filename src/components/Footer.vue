@@ -37,7 +37,7 @@ export default {
   color: $color-white;
 
   text-align: center;
-  font-family: $serif;
+  font-family: $sans-serif;
   line-height: 1.2;
 
   .flex {
@@ -56,6 +56,7 @@ export default {
   p {
     line-height: 1.2;
     margin: 0 auto;
+    font-family: $sans-serif;
   }
 
   img {

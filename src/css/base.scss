@@ -23,7 +23,8 @@ section {
   padding: 0 1rem;
 
   &.background {
-    background: rgba($color-theme, 0.2);
+    /*background: rgba($color-theme, 0.2);*/
+    background: #ededed;
     padding: 4rem 1rem;
   }
 
@@ -121,7 +122,8 @@ ul {
     padding: 1.4rem 2rem;
     
     &.background {
-      background: rgba($color-theme, 0.3);
+      /*background: rgba($color-theme, 0.3);*/
+      background: #ededed;
     }
 
     @media (max-width: $media-s) {
@@ -144,7 +146,8 @@ ul {
         width: 0.36rem;
         height: 0.36rem;
         border-radius: 50%;
-        background: darken($color-theme, 10%);
+        /*background: darken($color-theme, 10%);*/
+        background: $color-theme;
         position: absolute;
         left: -0.9rem;
         top: 0.5rem;

@@ -22,7 +22,8 @@ blockquote {
   margin: 4rem auto 4.6rem;
   padding: 0 1rem;
   font-style: italic;
-  font-size: 2.4rem;
+  font-size: 2rem;
+  font-family: $serif;
   line-height: 1.3;
   text-align: center;
 
