@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Oswald:200,300,400,700|Crimson+Text:400,400i,700,700i|Noto+Serif:400,400i,700,700i|PT+Serif:400,400i,700,700i|PT+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900|Oswald:200,300,400,700|Crimson+Text:400,400i,700,700i|PT+Serif:400,400i,700,700i|PT+Sans:400,400i,700,700i');
+@import url("https://use.typekit.net/vex1kih.css");
 
-.googlefonts {
+.theme1 {
   h1, h2, h3, h4, h5, h6, .download, .subhead {
     font-family: 'oswald', impact, sans-serif !important;
   }
-  p, figcaption, ul, blockquote {
+  p, figcaption, ul, blockquote, .site-footer {
     font-family: 'pt serif', serif !important;
   }
   p.lead, .photoby {
@@ -32,16 +33,32 @@
   }
 }
 
-.googlefonts2 {
+.theme2 {
   font-size: 120%;
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'abril fatface', serif !important;
+    font-family: 'playfair display', serif !important;
+    font-weight: 900;
+  }
+  blockquote {
+    font-family: 'playfair display', serif !important;
     font-weight: 400;
   }
-  h1, h2, h3 {
-    text-transform: uppercase;
-  }
-  .subhead, p, figcaption, ul, blockquote, .photoby, .download {
+  .subhead, p, figcaption, ul, .photoby, .download, .site-footer {
     font-family: 'crimson text', serif !important;
+  }
+  div.split figcaption, div.split.quote figcaption {
+    font-family: 'playfair display', serif !important;
+    font-size: 1.6rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+.theme3 {
+  font-size: 120%;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'jaf-lapture', serif !important;
+  }
+  .subhead, p, figcaption, ul, blockquote, .photoby, .download, .site-footer {
+    font-family: 'jaf-lapture', serif !important;
   }
 }

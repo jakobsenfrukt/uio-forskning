@@ -1,12 +1,14 @@
 <template>
   <div class="hero">
-  <!--<div class="hero" :style="{ 'background-image': 'url(' + image + ')' }">-->
-    <img :src="image" />
+    <img v-if="image" :src="image" />
+    <video v-else muted autoplay loop>
+      <source :src="video" type="video/mp4">
+    </video>
     <div class="overlay">
       <transition name="fadeup" appear>
       <div class="text">
         <h1>{{ heading }}</h1>
-        <span class="subhead">RITMO - Centre for Interdisciplinary Studies in Rhythm, Time and Motion</span>
+        <span class="subhead">{{ subhead }}</span>
       </div>
       </transition>
     </div>
@@ -18,7 +20,9 @@ export default {
   name: 'Hero',
   props: {
     image: String,
-    heading: String
+    video: String,
+    heading: String,
+    subhead: String
   }
 }
 </script>
@@ -27,17 +31,19 @@ export default {
 @import '@/css/variables.scss';
 
 .hero {
-  margin: 0 auto 2rem;
+  margin: 3rem auto;
   position: relative;
   min-height: 60vh;
+  background: $color-black;
 
   /*height: 70vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;*/
 
-  img {
-    width: 100%;
+  img, video {
+    height: 100%;
+    object-fit: cover;
   }
 
   .overlay {
@@ -59,7 +65,7 @@ export default {
     margin-bottom: 0;
   }
   .subhead {
-    font-size: $font-s;
+    font-size: 1rem;
     line-height: 1.2;
     display: block;
     margin: 0.5rem 0 1.6rem;

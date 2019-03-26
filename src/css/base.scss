@@ -64,8 +64,8 @@ p {
 
   &.lead {
     font-size: 1.4rem;
-    max-width: $width-m;
     margin-bottom: 4rem;
+    line-height: 1.3;
   }
 }
 
@@ -113,7 +113,7 @@ ul {
 .facts {
   max-width: $width-s;
   margin: 0 auto;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 
   &-inner {
     margin: 0 -2rem;

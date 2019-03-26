@@ -9,14 +9,18 @@ $color-black: #000;
 $color-red: #e2231a;
 $color-gray: #dedede;
 
-$color-theme: #2dc2b5;
+$color-theme: #f0bf20;
+$color-theme-dark: $color-black;
 
 $color-background: $color-white;
 $color-text: $color-black;
 
+$width-xxs: 18rem;
 $width-xs: 24rem;
 $width-s: 33rem;
-$width-m: 42rem;
+$width-m: 44rem;
 $width-l: 48rem;
+$width-xl: 56rem;
 
 $media-s: 700px;
+$media-m: 900px;

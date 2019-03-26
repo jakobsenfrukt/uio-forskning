@@ -53,6 +53,10 @@ div {
     width: $width-l;
     margin-top: 3rem;
 
+    &.full {
+      width: 100%;
+    }
+
     figure {
       display: flex;
       align-items: center;
@@ -70,14 +74,13 @@ div {
       width: 50%;
       background: none;
       color: $color-black;
-      line-height: 1.6;
+      line-height: 1.3;
       font-style: italic;
       font-family: $serif;
-      font-size: 1rem;
+      font-size: 1.6rem;
     }
 
     .photoby {
-      text-align: left;
       margin-top: 1rem;
     }
 
@@ -114,6 +117,7 @@ div {
 
   &.quote {
     figcaption {
+      font-size: 1.6rem;
       font-style: italic;
       font-family: $serif;
     }
@@ -131,12 +135,10 @@ div {
     z-index: 10;
     background: $color-black;
     color: $color-white;
-
-    font-size: $font-s;
   }
 
   .photoby {
-    font-size: $font-xs;
+    font-size: 1rem;
     display: block;
     font-style: italic;
     text-align: right;

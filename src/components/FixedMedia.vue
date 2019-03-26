@@ -51,7 +51,8 @@ div {
   }
 
   figcaption {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 1rem 1rem;
+    line-height: 1.3;
     max-width: $width-s;
     margin: -1rem auto;
     position: relative;

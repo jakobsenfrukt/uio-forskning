@@ -21,10 +21,9 @@ blockquote {
   max-width: 100%;
   margin: 4rem auto 4.6rem;
   padding: 0 1rem;
-  font-family: $serif;
   font-style: italic;
-  font-size: 2rem;
-  line-height: 1.4;
+  font-size: 2.4rem;
+  line-height: 1.3;
   text-align: center;
 
   &:before {
