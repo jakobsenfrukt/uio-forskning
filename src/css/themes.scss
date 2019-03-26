@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900|Oswald:200,300,400,700|Crimson+Text:400,400i,700,700i|PT+Serif:400,400i,700,700i|PT+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i,900|Oswald:200,300,400,700|Crimson+Text:400,400i,700,700i|PT+Serif:400,400i,700,700i|PT+Sans:400,400i,700,700i');
 @import url("https://use.typekit.net/vex1kih.css");
 
 .theme1 {
@@ -17,9 +17,11 @@
   }
   h2 {
     font-size: 3.8rem;
+    color: darken($color-theme, 10%) !important;
   }
   h3 {
     font-size: 2.4rem;
+    color: darken($color-theme, 16%) !important;
   }
   .download {
     font-size: 2rem;
@@ -69,11 +71,56 @@
 }
 
 .theme3 {
-  font-size: 120%;
-  h1, h2, h3, h4, h5, h6 {
+  font-size: 110%;
+  h1, h2, h3, h4, h5, h6, blockquote {
+    font-family: 'poppins', serif !important;
+  }
+  h1 {
+    line-height: 1.06;
+  }
+  h2, h3 {
+    color: darken($color-theme, 20%) !important;
+  }
+  .subhead, p, figcaption, ul, .photoby, .download, .site-footer {
     font-family: 'jaf-lapture', serif !important;
   }
-  .subhead, p, figcaption, ul, blockquote, .photoby, .download, .site-footer {
-    font-family: 'jaf-lapture', serif !important;
+  .subhead {
+    font-style: italic;
+  }
+  div.split figcaption, div.split.quote figcaption {
+    font-size: 1.6rem !important;
+    line-height: 1.4 !important;
+  }
+  figcaption {
+    background: white !important;
+    color: black !important;
+    padding: 1.5rem 2rem 2rem !important;
+  }
+  .gallery-fixed .text-wrapper blockquote:before {
+    top: 0.2rem !important;
+    font-size: 7rem !important;
+  }
+  blockquote {
+    font-weight: 300 !important;
+    line-height: 1.3;
+    font-style: normal !important;
+  }
+  .quote {
+    font-size: 1.8rem;
+  }
+  div.split figcaption, div.split.quote figcaption {
+    font-family: 'poppins', serif !important;
+    font-size: 1.5rem !important;
+    font-style: normal !important;
+  }
+  blockquote:before, blockquote:after {
+    color: $color-theme !important;
+  }
+  .site-header, .site-footer, .menu, .menu li a {
+    background: #222;
+    font-family: 'poppins', serif !important;
+  }
+  .menu h3 {
+    color: white !important;
   }
 }
